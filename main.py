@@ -2,7 +2,7 @@ import json
 from typing import List, Optional, Dict
 
 import uvicorn
-import pymorphy2
+import pymorphy3
 import re
 from fastapi import FastAPI, Request, Depends
 from pydantic import BaseModel
@@ -61,8 +61,8 @@ async def get_law_links(
         _alias_ready = False
 
     if not _alias_ready:
-        import pymorphy2
-        morph = pymorphy2.MorphAnalyzer()
+        import pymorphy3
+        morph = pymorphy3.MorphAnalyzer()
         alias_exact_map = {}
         alias_lemma_map = {}
         alias_max_len = 0

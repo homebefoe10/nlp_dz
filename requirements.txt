@@ -1,5 +1,5 @@
 fastapi==0.118.0
 uvicorn==0.37.0
-pymorphy2==0.9.1
+pymorphy3==2.0.4
 pydantic==2.12.3
 setuptools>=65.0.0
